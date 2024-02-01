@@ -72,7 +72,8 @@ struct ContentView: View {
                     }
                 }
             }
-            .padding(.bottom, 24)
+            .padding(.bottom, 16)
+            .animation(.spring(duration: 0.1), value: currentStep)
             
             Button(action: {
                 if self.currentStep < count - 1 {
