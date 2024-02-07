@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("isOnBoarding") var isOnBoarding: Bool?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            isOnBoarding = true
+        }, label: {
+            Text("Return to OnBoarding view")
+                .padding()
+                .padding(.horizontal)
+                .background(.black)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        })
     }
 }
 

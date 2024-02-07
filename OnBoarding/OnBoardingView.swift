@@ -31,7 +31,7 @@ struct OnBoardingView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    self.currentStep = onBoardingSteps.count - 1
+                    isOnBoarding = false
                 }) {
                     Text("Skip")
                         .padding(16)
